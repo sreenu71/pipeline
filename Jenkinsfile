@@ -3,12 +3,22 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                echo 'Hello World'
+                echo 'cloning the repository'
             }
         }
         stage('Build') {
             steps {
-                echo 'Deploying'
+                echo 'Build the code'
+            }
+        }
+        stage('test') {
+            steps {
+                echo 'test the package'
+            }
+        }
+        stage('deploy') {
+            steps {
+                echo 'Hello World'
             }
         }
     }
